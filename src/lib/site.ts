@@ -1,7 +1,7 @@
 export const SITE = {
   name: "CalcNest",
   tagline: "Fast, accurate calculators for everyday decisions",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://calcnest.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculators.thecodesplitter.com",
   email: "thecodesplitters@gmail.com",
   publisher: "Code Splitters",
 } as const;
