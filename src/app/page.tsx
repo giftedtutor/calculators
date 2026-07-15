@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden border-b border-line/70">
         <div
-          className="pointer-events-none absolute inset-0 opacity-40"
+          className="pointer-events-none absolute inset-0 hidden opacity-40 md:block"
           style={{
             backgroundImage:
               "linear-gradient(rgba(14,124,107,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(14,124,107,0.06) 1px, transparent 1px)",
@@ -20,19 +20,17 @@ export default function HomePage() {
           }}
           aria-hidden
         />
-        <div className="container relative grid items-center gap-10 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-20">
+        <div className="container relative grid items-center gap-10 py-12 md:grid-cols-[1.15fr_0.85fr] md:py-20">
           <div>
-            <p className="animate-fade text-sm font-semibold uppercase tracking-[0.14em] text-accent">
-              {SITE.name}
-            </p>
-            <h1 className="display animate-rise mt-3 max-w-xl text-4xl font-bold leading-[1.08] text-ink md:text-5xl lg:text-[3.4rem]">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">{SITE.name}</p>
+            <h1 className="display mt-3 max-w-xl text-4xl font-bold leading-[1.08] text-ink md:text-5xl lg:text-[3.4rem]">
               Calculators that stay out of your way
             </h1>
-            <p className="animate-rise delay-1 mt-5 max-w-lg text-base leading-relaxed text-ink-muted md:text-lg">
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-ink-muted md:text-lg">
               {SITE.tagline}. Finance, health, conversions, and science — clear inputs, instant
               answers, built for every screen.
             </p>
-            <div className="animate-rise delay-2 mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/calculators" className="btn btn-primary">
                 Browse all calculators
               </Link>
@@ -42,7 +40,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="animate-rise delay-3 relative hidden min-h-[280px] md:block">
+          <div className="relative hidden min-h-[280px] md:block">
             <div
               className="absolute inset-0 rounded-[28px]"
               style={{
@@ -92,7 +90,7 @@ export default function HomePage() {
         <AdSlot slot="in-article" />
       </div>
 
-      <section className="container py-12 md:py-16">
+      <section className="cv-auto container py-12 md:py-16">
         <h2 className="display text-2xl font-bold text-ink md:text-3xl">More tools</h2>
         <p className="mt-2 max-w-2xl text-ink-muted">
           Discount, tips, compound interest, date difference, and more converters.
@@ -104,7 +102,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-white/50">
+      <section className="cv-auto border-y border-line bg-white/50">
         <div className="container grid gap-8 py-14 md:grid-cols-3">
           {[
             {

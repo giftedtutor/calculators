@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { DM_Sans, JetBrains_Mono, Sora } from "next/font/google";
+import { Sora } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd, buildPageMetadata, websiteJsonLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["400", "600", "700"],
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -42,18 +33,24 @@ export const metadata: Metadata = {
   }),
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0e7c6b",
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const adsense = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
   return (
-    <html lang="en" className={`${dmSans.variable} ${sora.variable} ${jetbrains.variable} h-full`}>
+    <html lang="en" className={`${sora.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased" suppressHydrationWarning>
         {adsense ? (
           <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsense}`}
             crossOrigin="anonymous"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
         ) : null}
         <JsonLd data={websiteJsonLd()} />
