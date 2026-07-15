@@ -1,4 +1,4 @@
-# CalcNest
+# CS Calculators
 
 Free, responsive online calculators with strong SEO and AdSense-ready legal pages.
 

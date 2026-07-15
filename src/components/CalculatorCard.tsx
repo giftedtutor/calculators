@@ -108,13 +108,11 @@ function CalcIcon({ slug }: { slug: string }) {
   }
 }
 
-export function CalculatorCard({ calc, index = 0 }: { calc: CalculatorMeta; index?: number }) {
-  const delay = index % 4 === 0 ? "" : `delay-${Math.min(index % 4, 3)}`;
-
+export function CalculatorCard({ calc }: { calc: CalculatorMeta; index?: number }) {
   return (
     <Link
       href={`/calculators/${calc.slug}`}
-      className={`surface group block p-5 transition duration-300 hover:-translate-y-1 hover:border-accent/40 animate-rise ${delay}`}
+      className="surface group block p-5 transition duration-300 hover:-translate-y-1 hover:border-accent/40"
     >
       <div className="flex items-start justify-between gap-3">
         <span

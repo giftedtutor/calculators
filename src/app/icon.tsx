@@ -16,11 +16,11 @@ export default function Icon() {
           background: "#0e7c6b",
           borderRadius: 8,
           color: "white",
-          fontSize: 18,
+          fontSize: 11,
           fontWeight: 700,
         }}
       >
-        C
+        CS
       </div>
     ),
     { ...size },

@@ -26,7 +26,7 @@ export default function CalculatorsPage() {
       <header className="max-w-2xl">
         <h1 className="display text-3xl font-bold text-ink md:text-4xl">All calculators</h1>
         <p className="mt-3 text-ink-muted">
-          Every tool on CalcNest — free to use, mobile-friendly, and built for quick answers.
+          Every tool on CS Calculators — free to use, mobile-friendly, and built for quick answers.
         </p>
       </header>
 

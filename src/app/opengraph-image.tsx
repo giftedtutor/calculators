@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "CalcNest — Free online calculators";
+export const alt = "CS Calculators — Free online calculators";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,13 +29,13 @@ export default function OpenGraphImage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 28,
+              fontSize: 18,
               fontWeight: 700,
             }}
           >
-            C
+            CS
           </div>
-          <div style={{ fontSize: 36, fontWeight: 700 }}>CalcNest</div>
+          <div style={{ fontSize: 36, fontWeight: 700 }}>CS Calculators</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.1, maxWidth: 900 }}>
